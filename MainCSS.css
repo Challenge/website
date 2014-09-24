@@ -1,0 +1,653 @@
+
+html, body {
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+	overflow-x: hidden;
+
+}
+
+/***************************** BODY/MIDDLE/Standard css ***********************************/
+
+#page {
+	width: 100%;
+    height: 970px;
+    border-style: solid;
+    border-width: 1px;
+	background-color: #E8E8E8;
+	background: -moz-linear-gradient(white, grey); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(white, grey); /* Standard syntax (must be last) */
+}
+
+#mainContainer {
+	overflow: auto;
+}
+
+#indhold {
+	margin: auto;
+	margin-top: 14px;
+	width: 1100px;
+	height: 650px;
+	background-color: white;
+	border-style: solid;
+	border-width: 2px;
+	margin-top: 300px;
+		overflow: auto;
+	
+	background-color: #E8E8E8;
+	background: -moz-linear-gradient(white, #D0D0D0); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(white, #D0D0D0); /* Standard syntax (must be last) */
+	    -moz-box-shadow: 0 0 5px 5px #888;
+        -webkit-box-shadow: 0 0 5px 5px#888;
+        box-shadow: 0 0 5px 5px #888;
+        border-radius: 10px;
+}
+
+#indholdText2 {
+	width: 100%;
+	height: 95%;
+	margin: auto;
+}
+
+#indholdDiv2 h5 {
+	color: red;
+	font-weight: bold;
+	text-decoration: underline;
+	font-size: 16px;
+}
+
+#indholdDiv2 {
+	position: relative;
+	margin-top: 15px;
+	width: 900px;
+	height: 100%;
+	margin-left: auto;
+	margin-right: auto;
+
+	background-image:url('images/logo3.png');
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+/****************************** HEADER/TOP/MENU CSS ******************************/
+
+.current {
+	text-decoration: underline !important;
+}
+
+#header-wrap {
+    float: left;
+    height: 290px;
+    width: 100%;
+    background: -moz-linear-gradient(white, #D0D0D0, white); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(#787878, #484848); /* Standard syntax (must be last) */
+		-moz-box-shadow: 0 0 5px 5px #888;
+		-webkit-box-shadow: 0 0 5px 5px#888;
+		box-shadow: 0 0 5px 5px #888;
+		border-radius: 10px;
+}
+
+header {
+    margin: auto;
+	margin-top: 30px;
+	width: 555px;
+	height: 200px;
+}
+	
+#menu {
+	height: 50px;
+	width: 100%;
+	position: auto;
+	margin: auto;
+	margin-top: 10px;
+	text-align: center;
+	
+	background: -moz-linear-gradient(white, #D0D0D0, white); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(#484848,#282828); /* Standard syntax (must be last) */
+		-moz-box-shadow: 0 0 5px 5px #000000;
+		-webkit-box-shadow: 0 0 5px 5px #000000;
+		box-shadow: 0 0 2px 1px #500000;
+		border-radius: 5px;
+}
+
+#menuText {
+	width: 1100px;
+	position: auto;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+#menuText2 {
+	width: 1200px;
+	position: auto;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+#facebookLogo {
+	float: right;
+	display: inline;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-top: 10px;
+}
+
+#twitterLogo {
+	float: right;
+	display: inline;
+	margin-right: 10px;
+	margin-top: 10px;
+}
+
+
+#menu a {
+	display: inline;
+	padding: 45px;
+	font-size: 22px;
+	font-weight: bold;
+	color: #F0F0F0;
+	text-decoration:none;
+	line-height: 56px;
+	}
+
+#menu p {
+	display: inline;
+	text-decoration:underline;
+}
+
+#menu a:hover {
+	color: #99CCFF;
+}
+
+/***************************** FOOTER/BOTTOM CSS ****************************/
+
+#footer {
+	position: relative;
+	height: 21px;
+	width: 100%;
+	bottom: 0px;
+	background-color: #686868;
+	text-align: center;
+}
+
+#footer p {
+	margin-left: 50px;
+	margin-right: 50px;
+	display: inline;
+	font-family: Plantin,"Plantin Pro","Book Antiqua",Georgia,"Times New Roman",serif;
+	font-weight: 400;
+	text-transform: uppercase;
+	color: #ccc;
+}
+
+#footer a {
+	text-decoration:none;
+}
+
+
+/********************** Index/AdminIndex CSS *********************************/
+
+#tab1 {
+	float:left;
+	margin-top: 10px;
+	margin-left: 95px;
+	width: 225px;
+	height: 280px;
+	margin-bottom: 20px;
+}
+
+#tab1 h3, #tab2 h3, #tab3 h3 {
+	margin: 0px;
+}
+
+#tab2 {
+	float:left;
+	width: 225px;
+	margin-top: 10px;
+	height: 280px;
+	margin-left: 20px;
+	margin-bottom: 20px;
+}
+
+#tab3 {
+	float:left;
+	width: 225px;
+	margin-top: 10px;
+	height: 280px;
+	margin-left: 20px;
+	margin-bottom: 20px;
+}
+
+#indhold p {
+	margin-left: 0px;
+	margin-top: 19px;
+	float: left;
+	color: white;
+}
+
+#indholdDiv2 h1 {
+	margin: 10px;
+	text-align: center;
+	font-size: 40px;
+	text-transform: uppercase;
+	text-shadow: #B3B3B3 0.1em 0.1em 0.1em;
+}
+
+
+#indholdDiv2 p {
+	color: black;
+	margin-top: 0px;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+#indholdDiv2 h2 {
+	font-weight: bold;
+	font-size: 20px;
+	text-shadow: grey 0.2em 0.2em 0.2em;
+}
+
+#indholdDiv2 h3 {
+	font-size: 20px;
+	font-weight: normal;
+	text-align: center;
+	margin: 0px;
+}
+
+#indholdDiv2 h4 {
+	margin: 10px;
+	text-align: center;
+	font-size: 40px;
+	text-transform: uppercase;
+	text-shadow: #B3B3B3 0.1em 0.1em 0.1em;
+}
+
+#forside1stor {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+#forside1stor h3 {
+	margin: 0px;
+	text-align: center;
+}
+
+#button1 {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	float: top;
+	margin-bottom: 10px;
+}
+
+#inholdTop {
+	width: 900px;
+	text-align: center;
+	float: right;
+	margin-left: auto;
+	margin-right: auto;
+	line-height: 18px;
+}
+
+#inholdTop h3 {
+	line-height: 18px;
+	text-align: center;
+	font-size: 18px;
+	font-weight: normal;
+}
+
+/********************** Turnering/AdminTurnering CSS **********************/
+
+#indholdDiv2 table {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+/************************* TABLE DESIGN(s) CSS ****************************/
+
+/** Table til Vagtplan **/
+
+.phpTable {
+	margin-left: auto;
+	margin-right: auto;
+	width:100%;
+	height: 80%;
+	border-style: solid;
+	border-width: 3px;
+	font-size: 30px;
+	color: white;
+	border-width: 0px;
+	border-collapse: collapse;
+	
+	-moz-border-radius-bottomleft:6px;
+	-webkit-border-bottom-left-radius:6px;
+	border-bottom-left-radius:6px;	
+}
+
+.phpTable tr:nth-child(odd) {
+	background: linear-gradient(#CDB79E,#8B7D6B); /* Standard syntax (must be last) */
+		-moz-box-shadow: 0 0 5px 5px #000000;
+		-webkit-box-shadow: 0 0 5px 5px #000000;
+		box-shadow: 0 0 2px 1px #500000;
+		border-radius: 5px;
+}
+.phpTable tr:nth-child(even) {
+	background: linear-gradient(#C1CDCD, #838B8B); /* Standard syntax (must be last) */
+		-moz-box-shadow: 0 0 5px 5px #000000;
+		-webkit-box-shadow: 0 0 5px 5px #000000;
+		box-shadow: 0 0 2px 1px #500000;
+		border-radius: 5px;
+}
+
+.phpTable td {
+	vertical-align:middle;	
+	border:1px solid;
+	border-color: black;
+	border-width:0px 1px 1px 0px;
+	text-align:left;
+	padding:6px;
+	font-size:20px;
+	font-family:Arial;
+	font-weight:normal;
+	color:#000000;
+}
+
+.phpTable td:first-child {
+	background: linear-gradient(#484848,#282828); /* Standard syntax (must be last) */
+	width:120px;
+	font-size: 20px;
+	color:white;
+	text-align: center;
+}
+
+.phpTable th {
+	color: white;
+	background: linear-gradient(#484848,#282828); /* Standard syntax (must be last) */
+	border-style: solid;
+	border-color: black;
+	border-width: 1px;
+}
+
+
+/** Table 1 til Turneringer **/
+
+.turneringTable {
+	border-style: solid;
+	border-width: 2px;
+	font-size: 20px;
+	line-height: 25px;
+	width: 80%;
+	border-collapse: collapse;
+	text-align: center;
+}
+
+.turneringTable td {
+	border-style: solid;
+	border-width: 2px;
+	border-color: black;
+}
+
+.turneringTable tr:nth-child(odd) {
+	background: linear-gradient(#C1CDCD, #E0EEEE); /* Standard syntax (must be last) */
+}
+.turneringTable tr:nth-child(even) {
+	background: linear-gradient(#C1CDCD, #838B8B); /* Standard syntax (must be last) */
+}
+
+.turneringTable tr:first-child {
+	color: white;
+	background: linear-gradient(#484848,#282828); /* Standard syntax (must be last) */
+}
+
+/** Table 2 til Turneringer **/
+
+.turneringTable2 {
+	border-style: solid;
+	border-width: 2px;
+	font-size: 20px;
+	line-height: 25px;
+	width: 26%;
+	border-collapse: collapse;
+	text-align: center;
+}
+
+.turneringTable2 td {
+	border-style: solid;
+	border-width: 2px;
+	border-color: black;
+}
+
+.turneringTable2 tr:nth-child(odd) {
+	background: linear-gradient(#C1CDCD, #838B8B); /* Standard syntax (must be last) */
+}
+.turneringTable2 tr:nth-child(even) {
+	background: linear-gradient(#C1CDCD, #838B8B); /* Standard syntax (must be last) */
+}
+
+.turneringTable2 tr:last-child {
+	color: white;
+	background: linear-gradient(#484848,#282828); /* Standard syntax (must be last) */
+}
+
+.turneringTable2 tr:first-child {
+	color: white;
+	background: linear-gradient(#484848,#282828); /* Standard syntax (must be last) */
+}
+
+/************************* Bordreservation/ADMIN Bordreservation CSS *******************************/
+
+
+#indholdLeft {
+    width:400px;
+    float: left;
+	margin-left: 75px;
+}
+
+#indholdLeft p {
+	font-size: 12px;
+	margin-left: 2px;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+#indholdRight {
+    width:400px;
+	float: left;
+}
+
+#zone1 {
+	position: absolute;
+	height: 306px;
+	width: 162px;
+	margin-top: -622px;
+	margin-left: 18px;
+	z-index: 2;
+}
+
+#zone2 {
+	position: absolute;
+	height: 306px;
+	width: 162px;
+	margin-top: -316px;
+	margin-left: 18px;
+	z-index: 2;
+}
+
+#zone3 {
+	position: absolute;
+	height: 378px;
+	width: 72px;
+	margin-top: -514px;
+	margin-left: 198px;
+	z-index: 2;
+}
+
+#zone4 {
+	position: absolute;
+	height: 108px;
+	width: 90px;
+	margin-top: -118px;
+	margin-left: 180px;
+	z-index: 2;
+}
+
+#zone5 {
+	position: absolute;
+	height: 72px;
+	width: 18px;
+	margin-top: -190px;
+	margin-left: 162px;
+	z-index: 2;
+
+}
+
+#zone6  {
+	position: absolute;
+	height: 18px;
+	width: 72px;
+	z-index: 2;
+}
+
+#zone7  {
+	position: absolute;
+	height: 18px;
+	width: 18px;
+	z-index: 2;
+}
+
+#buttonOfDespair {
+	position: relative;
+	margin-top: 200px;
+	text-align: center;
+}
+
+#back {
+	position: relative;
+	margin-top: 500px;
+}
+
+
+#doom1 {
+	position: absolute;
+	width: 100%;
+	height: 99%;
+	text-align: center;
+	border-style: solid;
+	
+		background-image:url('images/mtDoom2.png');
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#doom2 {
+	position: absolute;
+	width: 250px;
+	height: 150px;
+	margin-left: 830px;
+	margin-right: auto;
+	margin-top: 500px;
+	text-align: center;
+	border-style: solid;
+	background: red;
+}
+
+#doom3 {
+	position: absolute;
+	width: 200px;
+	height: 50px;
+	margin-left: 855px;
+	margin-right: auto;
+	margin-top: 800px;
+	text-align: center;
+	border-style: solid;
+	background: red;
+}
+
+#doom1 h1 {
+	color: white;
+	font-size: 50px;
+	text-shadow: black 0.1em 0.1em 0.2em;
+}
+
+
+
+
+/******************************* Galleri/ADMIN Galleri CSS *****************************/
+
+#left {
+	float: left;
+	display: inline;
+	position: relative;
+	width: 75px;
+	height: 550px;
+	background:transparent url('images/Arrow1Left.png');
+	
+	-webkit-user-select: none;
+	-moz-user-select: none;
+}
+
+#left:hover {
+	background-image:url('images/Arrow2Left.png');
+}
+
+#left:active {
+	width: 70px;
+	margin-left: 5px;
+}
+
+
+#right {
+	float: right;
+	display: inline;
+	position: relative;
+	width: 75px;
+	height: 550px;
+	background:transparent url('images/Arrow1Right.png');
+	
+	-webkit-user-select: none;
+	-moz-user-select: none;
+}
+
+#right:hover {
+	background-image: url('images/Arrow2Right.png');
+}
+
+#right:active {
+	background-image: url('images/Arrow3Right.png');
+	background-repeat: no-repeat;
+	margin-top: 18px;
+
+}
+
+#newGallery {
+	width: 180px;
+	height: 80px;
+	float: left;
+	margin-left: 30px;
+	margin-top: 40px;
+	background: linear-gradient(#484848,#282828);
+	border-style: solid;
+	border-width: 4px;
+}
+
+#newGallery h1 {
+	font-size: 20px;
+	color: white;
+	text-decoration: none;
+	text-shadow: black 0.1em 0.1em 0.1em;
+}
+
+#newGallery:hover h1 {
+    color: #99CCFF;
+}
+
+#tal {
+	margin-left:500px;
+	margin-top: auto;
+	text-align: center;
+}

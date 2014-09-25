@@ -1,4 +1,6 @@
 gallery/*
 git.log
+github-hook.php
+github-log.php
 db.php
 

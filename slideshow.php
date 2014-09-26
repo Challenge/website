@@ -12,7 +12,7 @@ include('top.php');
 						
 				<!-- Her loader vi billederne fra den ønskede mappe, og gør klar til at vise dem (via en Array) -->
 						<?php
-							chdir('Gallery/'. $gallery);
+							chdir('gallery/'. $gallery);
 							$result = array();
 							$files = scandir(getcwd());
 

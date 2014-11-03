@@ -19,7 +19,7 @@ include('variable.php');
 						if ($color["Color"] == "White") {$currentTable = $ii; break;}
 					}
 					
-                    if (isset($_GET['pid'])) {
+                    if (isset($_GET['pid']) && is_numeric($_GET['pid']) && $_GET['pid'] >= 1 && $_GET['pid'] <= 80 ) {
                         $id = $_GET['pid'];
 
                         if (isset($_POST['ticketID'])) {
@@ -312,5 +312,3 @@ include('variable.php');
 <?php
 include('bottom.html');
 ?>
-
-

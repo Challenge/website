@@ -254,7 +254,7 @@ include('variable.php');
 				</br>
 				
 					<h3 style='text-align: center; font-weight: bold;'> Vælg og klik på en ledig plads på billedet til
-					venstre, og indtast dit navn og billet-ID
+					venstre, og indsæt dit navn og billet-ID
 					for at bestille: </h3>
                     
                     <form action='' method='post'>

@@ -21,10 +21,10 @@ include("db.php");
                                      SET Playername='', TicketID='', Color='White'";
                     $resSeatTicket = mysqli_query($db, $dpSeatTicket);
                     if ($resSeatTicket) {
-                        $dpTicket = "DROP TABLE Ticket";
+                        $dpTicket = "DROP TABLE ticket";
                         $resDpTicket = mysqli_query($db, $dpTicket);
                         if ($resDpTicket) {
-                            $createTicket = "CREATE TABLE Ticket (
+                            $createTicket = "CREATE TABLE ticket (
                                              TicketID VARCHAR(40),
                                              PRIMARY KEY (TicketID))";
                             $resCreTicket = mysqli_query($db, $createTicket);
@@ -39,7 +39,7 @@ include("db.php");
 
 								
 									/* 0 - 24, da array størelsen er 24*/
-                                    $createRandTID = "INSERT INTO Ticket (TicketID)
+                                    $createRandTID = "INSERT INTO ticket (TicketID)
                                     VALUES ('" 				. $input[mt_rand (0, 24)]
                                                             . $input[mt_rand (0, 24)]
                                                             . $input[mt_rand (0, 24)]
@@ -65,10 +65,10 @@ include("db.php");
                                     echo "Error in creating random ticketIDs";
                                 }
                             } else {
-                                echo "Ticket Table NOT created why?";
+                                echo "ticket Table NOT created why?";
                             }
                         } else {
-                            echo "Ticket not dropped, why";
+                            echo "ticket not dropped, why";
                         }
                     } else {
                         echo "Booking Table was not updated correctly";

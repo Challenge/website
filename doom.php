@@ -17,7 +17,7 @@ include("db.php");
                 /* Her er GENSTART DIKULAN funktionen, kaldet via button */
                 if (isset($_POST['DestroyCreate']))
 				{
-                    $dpSeatTicket = "UPDATE Booking
+                    $dpSeatTicket = "UPDATE booking
                                      SET Playername='', TicketID='', Color='White'";
                     $resSeatTicket = mysqli_query($db, $dpSeatTicket);
                     if ($resSeatTicket) {

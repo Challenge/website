@@ -29,28 +29,31 @@ include("db.php");
                                              PRIMARY KEY (TicketID))";
                             $resCreTicket = mysqli_query($db, $createTicket);
                             if ($resCreTicket) {
+							    $input = array("A", "B", "C", "D", "E", "F", "G",
+                                "H", "I", "J", "K", "L", "M", "N",
+                                "P", "Q", "R", "S", "T", "U", "V",
+                                "W", "X", "Y", "Z");
+								$streg = "-";
+								
                                 for ($x = 1; $x <= 80; $x++) {
-                                    $input = array("A", "B", "C", "D", "E", "F", "G",
-                                                   "H", "I", "J", "K", "L", "M", "N",
-                                                   "P", "Q", "R", "S", "T", "U", "V",
-                                                   "W", "X", "Y", "Z");
-                                    $rand_keys = array_rand($input, 9);
-                                    $streg = "-";
+
+								
+									/* 0 - 24, da array størelsen er 24*/
                                     $createRandTID = "INSERT INTO Ticket (TicketID)
-                                    VALUES ('" . $input[$rand_keys[0]]
-                                                            . $input[$rand_keys[1]]
-                                                            . $input[$rand_keys[2]]
+                                    VALUES ('" 				. $input[mt_rand (0, 24)]
+                                                            . $input[mt_rand (0, 24)]
+                                                            . $input[mt_rand (0, 24)]
                                                             . $streg
-                                                            . $input[$rand_keys[3]]
-                                                            . $input[$rand_keys[4]]
-                                                            . $input[$rand_keys[5]]
+                                                            . $input[mt_rand (0, 24)]
+                                                            . $input[mt_rand (0, 24)]
+                                                            . $input[mt_rand (0, 24)]
                                                             . $streg
-                                                            . $input[$rand_keys[6]]
-                                                            . $input[$rand_keys[7]]
-                                                            . $input[$rand_keys[8]]
+                                                            . $input[mt_rand (0, 24)]
+                                                            . $input[mt_rand (0, 24)]
+                                                            . $input[mt_rand (0, 24)]
                                                             . "')";
                                     $resCreRandTID = mysqli_query($db, $createRandTID);
-                                }
+								}
                                 if ($resCreRandTID) {
                                     echo "<script type='text/javascript'>"
                                              . "alert('RESTART SUCCES!\\n"

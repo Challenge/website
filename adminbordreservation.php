@@ -1,5 +1,5 @@
 <?php
-include('IsLoggedIn.php');
+include('isLoggedIn.php');
 include('top2.php');
 include('variable.php');
 ?>	
@@ -9,6 +9,15 @@ include('variable.php');
     <div id="indhold">
         <div id="indholdText2">
             <div id="indholdDiv2">
+			<!-- Knap for at udprinte billet-ID'erne -->
+                <h2>Knap for at udprinte billet-ID'erne:</h2>
+                Klik her for billetter.
+                <form action="billetter.php">
+                    <button name="status" value="Submit">Se billetter</button>
+                </form>
+			
+			
+			
 			<!-- Her ses der om administratoren har valgt at åbne eller lukke for bordreservationen -->
                 <?php
                 if (isset($_POST['openDIKULAN'])) {

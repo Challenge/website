@@ -24,25 +24,25 @@ include('variable.php');
 
                         if (isset($_POST['ticketID'])) {
                             $checkSeat = mysqli_query($db, "SELECT SeatID
-                                                         FROM Booking
+                                                         FROM booking
                                                          WHERE Color='White'
                                                              AND SeatID = $id");
                             $numCheckSeat = mysqli_num_rows($checkSeat);
                             if ($numCheckSeat > 0) {
                                 $result = mysqli_query($db, "SELECT TicketID
-                                                         FROM Ticket
+                                                         FROM ticket
                                                          WHERE TicketID='$_POST[ticketID]'");
                                 $numResults = mysqli_num_rows($result);
                                 if ($numResults > 0) {
                                     $bookingRes = mysqli_query($db, "SELECT TicketID
-                                                                 FROM Booking
+                                                                 FROM booking
                                                                  WHERE TicketID='$_POST[ticketID]'");
                                     $numBookRes = mysqli_num_rows($bookingRes);
                                     if ($numBookRes > 0) {
                                         echo "<script type='text/javascript'>alert('You have already booked a seat for this LAN party with your ticket ID.');</script>";
                                     } else {
                                         if ($_POST['playername'] != '' AND $id != 'Choose a seat') {
-                                            mysqli_query($db, "UPDATE Booking
+                                            mysqli_query($db, "UPDATE booking
                                                            SET PlayerName='$_POST[playername]',
                                                                TicketID='$_POST[ticketID]',
                                                                Color='Red'

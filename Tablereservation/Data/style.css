@@ -1,0 +1,48 @@
+
+
+#mainDiv, #mainView , #fieldDiv{
+	display:inline-block;
+}
+
+#validationDiv{
+	text-align:left;
+	vertical-align:top;
+	width:300px;
+}
+
+#optionsDiv, #fieldDiv {
+	vertical-align:top;
+}
+
+
+.help{	
+	position:relative;
+	top:3px;
+	left:3px;
+	width:16;
+	height:16;	
+}
+
+.error{
+	padding:1px;
+	padding-left:10px;
+	margin-top:5px;	
+	margin-bottom:5px;
+	color:red;
+	background-color:#EFE9B0;
+	border:1px solid grey;
+}
+
+.formLegend{
+	color:blue;
+	font-weight:bold;
+}
+
+.clickable{
+	cursor:pointer;
+}
+
+.unclickable{
+	cursor:default;
+}
+

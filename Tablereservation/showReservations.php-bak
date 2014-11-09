@@ -1,0 +1,47 @@
+<?php
+
+include "Data/settings.php";
+include "Php/databaseInteraction.php";
+
+/* bubblesort because im fucking lazy*/
+function doSort($array){
+	for($i = 0; $i < sizeof($array); $i++){
+		for($j = 0; $j < sizeof($array); $j++){
+		
+			if($array[$i][0] < $array[$j][0]){
+				$temp = $array[$i];
+				$array[$i] = $array[$j];
+				$array[$j] = $temp;
+			}
+		}
+	}
+	return $array;
+}
+
+$reservations = getReservations()->fetchAll();
+$reservations = doSort($reservations);
+
+
+
+?>
+<table border ="1">
+<tr> 
+<th>Plads nummer</th>
+<th>Navn</th>
+<th>Billet ID</th>
+</tr>
+<?php
+
+foreach($reservations as $row){
+?>
+<tr> 
+<td> <?php echo $row[0];?> </td>
+<td> <?php echo $row[1];?> </td>
+<td> <?php echo $row[2];?> </td>
+</tr>
+<?php	
+}
+echo "</p>";
+
+?>
+</table>

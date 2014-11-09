@@ -1,0 +1,96 @@
+// Dette dokument bruger en hjemmelavet syntax til at beskrive et rum
+// Vil man tilføje/ændre i denne syntax skal man se på roomMaker.php.
+
+
+// z-indexet for diverse ting man opretter (AREA, OBJECT og SEATAREA) bliver bestemt af hvornår de oprettets.
+// Jo senere de oprettes jo højere z-index
+
+// Tilesets defineres som: navn fil-begyndelse tilesetName
+// Navn må ikke indeholde mellemrum
+// Her initialiseres 'grafikken' til de forskellige områder
+// Et Tileset er defineret af 9 billeder.
+// - Et billed pr. hjørne (NW,NE,SW,SE)		NW   N   NE
+// - Et billed pr. retning (N,W,S,E)		W   FILL  E
+// - Et billed til fylder (Fill)		    SW   S   SE
+// - Alt 'grafik' skal være i png format.
+
+
+// Det første 'argument' TILESET:: kan ses som et slags variabel navn. 
+// Når man senere i denne fil laver skal bruge tilesette skal man referere til dette navn.
+// Det næste 'argument' er fil-begyndelsen. 
+// Når et tileset skal laves, leder den i den givne i sti (det tredje argument) efter filer ved navn <arg2>N.png, <arg2>S.png, <arg2>E.png osv.
+// Finder den ikke en af filerne vil den bruge default filen (<arg2>Fill.png) findes denne heller ikke vil tilesettet bare være blankt
+
+TILESET:: gulv floor tileset1/floor
+TILESET:: musik music tileset1/music
+TILESET:: ikke-musik nonmusic tileset1/nonmusic
+TILESET:: konsol console tileset1/console
+TILESET:: film movie tileset1/movie
+TILESET:: køkken kitchen tileset1/kitchen
+TILESET:: væg wall tileset1/wall
+
+// Tile er 'grafik' til objecter.
+// TILE:: seat tileset1/seat vil f.eks. sætte classen seat til at have grafikken "tileset1/seat/seat.png"
+TILE:: door tileset1/objects/doorH.png
+TILE:: floorTile tileset1/floor/floorFill.png
+TILE:: pillar tileset1/objects/floor-pillar.png
+TILE:: vendingmachine tileset1/objects/vendingmachine.png
+TILE:: vendingmachine2 tileset1/objects/vendingmachine.png
+
+// Områder defineres som: x1 y1 x2 y2 tileSetNavn title
+// Title er den text der bliver vist ved mouseover
+AREA:: 0 0 15 35 gulv Gulv
+AREA:: 1 1 9 17 ikke-musik Ikke-musik enden
+AREA:: 1 18 9 34 musik Musik enden
+AREA:: 10 1 14 6 film Film hjørnet
+AREA:: 10 29 14 34 konsol Konsol hjørnet
+AREA:: 10 6 14 28 køkken Køkkenet
+
+// Defineret lige som et AREA, men man placere (x2-x1) * (y2-y1)
+// Divs med id SEAT[n] hvor n er dets plads nummer (burde gå fra 1-80)
+TILE:: seat tileset1/seats/seat.png
+TILE:: seat-taken tileset1/seats/seat-taken.png
+TILE:: seat-selected tileset1/seats/seat-selected.png
+TILE:: seat-mouseover tileset1/seats/seat-mouseover.png
+// ** Overstående tiles beskriver hvordan hvert "seat" kommer til at se ud.
+// ** Disse 4 kald skal laves.
+SEATAREA:: 1 4 5 5 
+
+SEATAREA:: 1 9 6 10 
+
+SEATAREA:: 1 13 6 13 
+SEATAREA:: 1 14 5 14 
+
+SEATAREA:: 1 17 6 18 
+ 
+SEATAREA:: 1 21 5 21 
+SEATAREA:: 1 22 6 22 
+
+SEATAREA:: 1 25 6 26 
+
+SEATAREA:: 1 30 6 31 
+
+// OBJECTER er defineret ved med et x, y, højde, bredte samt navn og tileset
+// Den vil lede i den givne tileSet mappe efter *navn*.png
+// OBJECT:: 2 0 1 1 transition vil f.eks. placere et div med "tileset1/objects/transition.png" (Initialiseret i TILE afdelingen), på plads (2,0)
+
+OBJECT:: 3 1 1 1 pillar Søjle
+OBJECT:: 6 1 1 1 pillar Søjle
+OBJECT:: 6 7 1 1 pillar Søjle
+OBJECT:: 6 14 1 1 pillar Søjle
+OBJECT:: 6 21 1 1 pillar Søjle
+OBJECT:: 6 28 1 1 pillar Søjle
+
+OBJECT:: 10 29 2 1 vendingmachine Automat
+OBJECT:: 12 29 2 1 vendingmachine Automat
+OBJECT:: 10 34 2 1 vendingmachine Automat
+OBJECT:: 12 34 2 1 vendingmachine Automat
+OBJECT:: 9 25 1 2 vendingmachine2 Automat
+OBJECT:: 9 27 1 2 vendingmachine2 Automat
+
+AREA:: 0 0 15 35 væg Væg
+AREA:: 10 6 15 28 væg Væg
+OBJECT:: 1 0 2 1 door Dør
+OBJECT:: 2 35 2 1 door Dør
+OBJECT:: 10 23 1 1 floorTile Gulv
+OBJECT:: 10 11 1 1 floorTile Gulv 

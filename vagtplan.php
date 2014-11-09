@@ -16,8 +16,8 @@ include('top.php');
 						<th> Søndag </th>
 
 					<?php	
-						$result = mysqli_query($db,"SELECT tid, fredag, lørdag, søndag FROM Vagtplan");
-						
+						$result = mysqli_query($db,"SELECT tid, fredag, lørdag, søndag FROM vagtplan");
+
 						while($row = mysqli_fetch_array($result))
 						{
 							echo "<tr> <td>" . $row['tid']    . "</td> 

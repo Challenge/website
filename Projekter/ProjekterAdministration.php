@@ -276,12 +276,15 @@ function moveFile($times = 0) {
  */
 try {
 	if (isset($_POST['upload']) && $_FILES[$INPUT]["size"] > 0) {
+echo "fisk1";
 		checkUploadedFile();
 		
+echo "fisk2";
 		if ($_FILES[$INPUT]["error"] > 0) {
 			echo "Return Code: " . $_FILES[$INPUT]["error"] . "<br />";
 		}
 		else {
+echo "fisk3";
 			$fh = fopen($LOG_FILE, 'a');
 			$str = "";
 			$str .= "Upload: " . $_FILES[$INPUT]["name"] . "\n";

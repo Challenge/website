@@ -74,7 +74,7 @@ html, body {
 	position: relative;
 	margin-top: 15px;
 	width: 900px;
-	overflow: auto;
+	height: 800px;
 	margin-left: auto;
 	margin-right: auto;
 

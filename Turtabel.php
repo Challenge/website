@@ -70,7 +70,7 @@ if (isset($_REQUEST['cmd'])) {
 <table class="turneringTable"><tr><td>Turneringsnavn</td><td>Deltagere Antal</td>
         <td>Dag</td><td>Tid</td><td>Se Deltagere & <br> Information</td></tr>
 <?php
-    $result = mysqli_query($db, "SELECT TurneringsNavn , COUNT(Deltager.TurneringsID)AS Antal "
+    $result = mysqli_query($db, "SELECT TurneringsNavn , COUNT(deltager.TurneringsID)AS Antal "
             . " , turtabel.TurneringsID , Dag, turtabel.Tid , turtabel.Description "
             . "FROM turtabel , deltager "
             . "WHERE turtabel.TurneringsID = deltager.TurneringsID "

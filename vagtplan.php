@@ -8,12 +8,7 @@ include('top.php');
 					<div id="indholdText2">
 						<div id="indholdDiv9">
 						
-						<?php
-						
-						include('Projekter/Projekter.php');
-						
-						
-						?>
+						<iframe src="Projekter/Projekter.php" frameBorder="0" style="width: 100%; height: 100%;"> </iframe>
 						
 						</div>
 					</div>

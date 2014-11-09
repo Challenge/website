@@ -7,7 +7,7 @@ if (isset($_GET['cmd'])) {
     $uni = $_GET['Turnering'] . " " . $_GET['Navn'] . " " . $_GET['Gametag'];
 
     if ($tur != '0') {
-        $sql = "INSERT INTO Deltager (TurneringsID , Navn , Gamertag , BordID , Unik)"
+        $sql = "INSERT INTO deltager (TurneringsID , Navn , Gamertag , BordID , Unik)"
                 . "VALUES ($tur , '$navn' , '$tag' , '$Bid' , '$uni' )";
     }
 }
@@ -23,8 +23,8 @@ if (isset($_GET['cmd'])) {
                     <option value="0">Vælg Turnering</option>
                     <?php
                     $turnavn = mysqli_query($db, "SELECT TurneringsID , TurneringsNavn "
-                            . "FROM Turtabel "
-                            . "ORDER BY Turtabel.TurneringsID desc");
+                            . "FROM turtabel "
+                            . "ORDER BY turtabel.TurneringsID desc");
                     while ($row = mysqli_fetch_array($turnavn)) {
                         echo "<option value=\"$row[0]\"> $row[1]</option>";
                     }
@@ -71,10 +71,10 @@ if (isset($_REQUEST['cmd'])) {
         <td>Dag</td><td>Tid</td><td>Se Deltagere & <br> Information</td></tr>
 <?php
     $result = mysqli_query($db, "SELECT TurneringsNavn , COUNT(Deltager.TurneringsID)AS Antal "
-            . " , Turtabel.TurneringsID , Dag, Turtabel.Tid , Turtabel.Description "
-            . "FROM Turtabel , Deltager "
-            . "WHERE Turtabel.TurneringsID = Deltager.TurneringsID "
-            . "Group BY Turtabel.TurneringsNavn");
+            . " , turtabel.TurneringsID , Dag, turtabel.Tid , turtabel.Description "
+            . "FROM turtabel , deltager "
+            . "WHERE turtabel.TurneringsID = deltager.TurneringsID "
+            . "Group BY turtabel.TurneringsNavn");
     while ($row = mysqli_fetch_array($result)) {
         echo "<tr><td>" . $row['TurneringsNavn'] . "</td>"
         . "<td>" . $row['Antal'] . "</td>"

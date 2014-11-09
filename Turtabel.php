@@ -67,8 +67,8 @@ if (isset($_REQUEST['cmd'])) {
 
 <!-- Dette table vil vise informationer om nuværende turneringer, og linke videre til flere informationer -->
 <h1>Turneringer</h1>
-<table class="turneringTable"><tr><td>Turneringsnavn</td><td>Deltagere Antal</td>
-        <td>Dag</td><td>Tid</td><td>Se Deltagere & <br> Information</td></tr>
+<table class="turneringTable"><tr><td>Turnering</td><td>Antal deltagere</td>
+        <td>Dag</td><td>Tid</td><td>Se deltagere & <br> information</td></tr>
 <?php
     $result = mysqli_query($db, "SELECT TurneringsNavn , COUNT(deltager.TurneringsID)AS Antal "
             . " , turtabel.TurneringsID , Dag, turtabel.Tid , turtabel.Description "

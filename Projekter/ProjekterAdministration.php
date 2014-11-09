@@ -619,6 +619,9 @@ catch (PDOException $e) {
 }
 
 
+
+
+var_dump($_POST);
 ?>
 
 </div>

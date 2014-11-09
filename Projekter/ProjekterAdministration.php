@@ -98,14 +98,14 @@ catch (PDOException $e) {
  * Provides:
  * getRandomString($length);
  */
-include getcwd() . '/../..' . '/DIKULAN/functions.inc';
+include getcwd() . '/../' . 'functions.inc';
 
 /*
  * Provides:
  * resample($targetFile, $sourceFile, $newWidth, $newHeight);
  * resize($targetFile, $sourceFile, $newWidth, $newHeight);
  */
-include getcwd() . '/../..' . '/DIKULAN/ImageLibrary.inc';
+include getcwd() . '/../' . 'ImageLibrary.inc';
 
 
 class InvalidFileType extends Exception { };

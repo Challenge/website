@@ -7,7 +7,7 @@ include('variable.php');
     <div id="indhold" style=" height: auto; overflow: hidden;"  >
         <div id="indholdText2">
             <div id="indholdDiv9">
-                <iframe src="Tablereservation\index.php" style="width: 100%; height: 100%;"> </iframe>
+                <iframe src="Tablereservation\index.php" framborder="0" style="width: 100%; height: 100%;"> </iframe>
             </div>
         </div>
     </div>

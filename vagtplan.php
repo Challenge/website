@@ -2,11 +2,11 @@
 include('top.php');
 ?>	
         
-        <div id="page">
+        <div id="page" style=" height: auto" >
             
-				<div id="indhold">
+				<div id="indhold" style=" height: auto; overflow: hidden;>
 					<div id="indholdText2">
-						<div id="indholdDiv2">
+						<div id="indholdDiv9">
 						
 						<?php
 						

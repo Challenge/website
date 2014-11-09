@@ -38,7 +38,7 @@ include("db.php");
 				<a <?php  if ($page=='index.php') echo 'class="current"'; ?> href="index.php">Forside</a>
 				<a <?php  if ($page=='galleri.php') echo 'class="current"'; ?> href="galleri.php">Galleri</a>
 				<a <?php  if ($page=='bordreservation.php') echo 'class="current"'; ?> href="bordreservation.php">Bordreservation</a>
-				<a <?php  if ($page=='vagtplan.php') echo 'class="current"'; ?> href="vagtplan.php">Vagtplan</a>
+				<a <?php  if ($page=='projektor.php') echo 'class="current"'; ?> href="projektor.php">Vagtplan</a>
 				<a <?php  if ($page=='turnering.php') echo 'class="current"'; ?> href="turnering.php">Tilmeld Turnering</a>
 				
 				</div>

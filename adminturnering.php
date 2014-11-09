@@ -1,6 +1,6 @@
 <?php
 include('top2.php');
-include('IsLoggedIn.php');
+include('isLoggedIn.php');
 ?>
 
 <!-- Opretter en turnering når der klikkes "Opret turnering",

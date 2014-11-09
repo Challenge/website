@@ -1,5 +1,5 @@
 <?php
-include('IsLoggedIn.php');
+include('isLoggedIn.php');
 include('top2.php');
 ?>	
      

@@ -1,32 +1,6 @@
-<?php 
-include getcwd() . '/../..' . '/JoomlaExternalCommunicator.inc';
-$JoomlaScript = new JoomlaScript();
-$userID = $JoomlaScript->joomlaGetUserID();
-$userGroups = $JoomlaScript->joomlaGetUserGroups($userID, 1);
-
-if(!(in_array(8, $userGroups) || in_array(14, $userGroups))){
-echo '
 <html>
 <head>
-<title>Adgang n&aelig;gtet</title>
-</head>
-<body style="margin: 50px; background-color: #FF0000;">
-<center>
-<p style="font-size: 24px;">Du har ikke adgang til denne side!</p>
-<p style="font-size: 24px;">Du skal v&aelig;re logget ind og medlem af DIKULAN gruppen for at se denne side.</p>
-</center>
-</body>
-</html>
-';
-
-	exit;
-}
-?>
-
-
-<html>
-<head>
-<title>PHP projekter</title>
+<title>PHP projekterscript administration</title>
 </head>
 <body>
 <div id="upload_page" style="height: 100%; width: 80%" align="center">

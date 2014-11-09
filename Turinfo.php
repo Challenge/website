@@ -8,8 +8,8 @@ $info = $_GET['INFO'];
 <div id="indholdLeft">
     <?php
     $result = mysqli_query($db, "SELECT turtabel.Tid, turtabel.Dag , turtabel.Description "
-            . "FROM Turtabel "
-            . "WHERE Turtabel.TurneringsNavn = '$info' ");
+            . "FROM turtabel "
+            . "WHERE turtabel.TurneringsNavn = '$info' ");
     while ($row = mysqli_fetch_array($result)) {
 	
         echo ("<div id='turDesc'>
@@ -39,10 +39,10 @@ $info = $_GET['INFO'];
             <td>BordID</td>
         </tr>
         <?php
-        $result = mysqli_query($db, "SELECT Deltager.Navn, Deltager.Gamertag, Deltager.BordID "
-                . "FROM Turtabel , Deltager "
-                . "WHERE Turtabel.TurneringsNavn = '$info' "
-                . "AND Turtabel.TurneringsID = Deltager.TurneringsID");
+        $result = mysqli_query($db, "SELECT deltager.Navn, deltager.Gamertag, deltager.BordID "
+                . "FROM turtabel , deltager "
+                . "WHERE turtabel.TurneringsNavn = '$info' "
+                . "AND turtabel.TurneringsID = deltager.TurneringsID");
         while ($row = mysqli_fetch_array($result)) {
             echo "<tr><td>" . $row['Navn'] . "</td>"
             . "<td> '" . $row['Gamertag'] . "' </td>"

@@ -120,7 +120,7 @@ static $UPLOAD_DIR = "uploaded_files";
 static $THUMBNAIL_DIR = "thumbnails";
 static $THUMBNAIL_PREFIX = "thumb_";
 static $HTTP_ROOT = "http://dikulan.dk/"; /* Remember trailing slash */
-static $RELATIVE_PATH = "DIKULAN/Projekter"; /* $HTTP_ROOT . $RELATIVE_PATH = full path */
+static $RELATIVE_PATH = "Projekter"; /* $HTTP_ROOT . $RELATIVE_PATH = full path */
 
 
 try {

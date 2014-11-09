@@ -23,11 +23,11 @@ if (isset($_GET['Opret'])) {
             . " VALUES (NULL, '$Turnavn', '$Tid', '$DagB', '$Desc')";
 } else if (isset($_GET['slet'])) {
     $ID = $_GET['Turid'];
-    $deletedel = "DELETE FROM `Deltager` WHERE `Deltager`.`TurneringsID` = $ID";
-    $deletetur = "DELETE FROM `Turtabel` WHERE `Turtabel`.`TurneringsID` = $ID";
+    $deletedel = "DELETE FROM `deltager` WHERE `deltager`.`TurneringsID` = $ID";
+    $deletetur = "DELETE FROM `turtabel` WHERE `turtabel`.`TurneringsID` = $ID";
 } else if (isset($_GET['reset'])) {
-    $truncatedel = "TRUNCATE TABLE `Deltager` ";
-    $truncatetur = "TRUNCATE TABLE `Turtabel` ";
+    $truncatedel = "TRUNCATE TABLE `deltager` ";
+    $truncatetur = "TRUNCATE TABLE `turtabel` ";
 }
 ?>
 
@@ -99,8 +99,8 @@ if (isset($_REQUEST['slet'])) {
                                     } else {
                                         echo "<p text align=\"center\"> Error ved navn </p>";
                                         $turnavn = mysqli_query($db, "SELECT TurneringsID , TurneringsNavn "
-                                                . "FROM Turtabel "
-                                                . "ORDER BY Turtabel.TurneringsID desc");
+                                                . "FROM turtabel "
+                                                . "ORDER BY turtabel.TurneringsID desc");
                                         while ($row = mysqli_fetch_array($turnavn)) {
                                             echo $row[0] . " ";
                                         }
@@ -121,8 +121,8 @@ if (isset($_REQUEST['slet'])) {
                                     <option value="0">Vælg Turnering</option>
                                     <?php
                                     $turnavn = mysqli_query($db, "SELECT TurneringsID , TurneringsNavn "
-                                            . "FROM Turtabel "
-                                            . "ORDER BY Turtabel.TurneringsID desc");
+                                            . "FROM turtabel "
+                                            . "ORDER BY turtabel.TurneringsID desc");
                                     while ($row = mysqli_fetch_array($turnavn)) {
                                         echo "<option value=\"$row[0]\"> $row[1]</option>";
                                     }

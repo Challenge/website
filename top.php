@@ -7,7 +7,7 @@ include("db.php");
 
 
 <head>
-    <title>DIKU-LAN</title>
+    <title>DIKU-LAN1</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link rel="stylesheet" type="text/css" href="MainCSS.css" />
 	

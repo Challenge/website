@@ -7,7 +7,7 @@ include("db.php");
 
 
 <head>
-    <title>DIKULAN</title>
+    <title>DIKULAN2</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link rel="stylesheet" type="text/css" href="MainCSS.css" />
 	

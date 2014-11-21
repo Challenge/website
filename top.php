@@ -24,7 +24,7 @@ include("db.php");
 			</div>
 			
 			<div id="facebookLogo">
-				<a href="https://www.facebook.com/events/1424545007805387/?fref=ts" target="_blank"> <img src="images/facebook.png" width="31" height="30"></a>
+				<a href="https://www.facebook.com/events/391402541018153/?fref=ts" target="_blank"> <img src="images/facebook.png" width="31" height="30"></a>
 			</div>
 			
 			<header>

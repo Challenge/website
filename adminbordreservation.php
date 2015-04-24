@@ -41,7 +41,7 @@ include('variable.php');
 
 			<!-- Her er knapperne for at åbne og lukke for bordreservationen -->
                 <?php
-                $isOpen = mysqli_fetch_assoc(mysqli_query($db, "SELECT yesNo FROM openClosed"));
+                $isOpen = mysqli_fetch_assoc(mysqli_query($db, "SELECT yesNo FROM openclosed"));
 
                 if ($isOpen["yesNo"] == "ja") {
                     echo ("<p>Bordreservationssystemet er i øjeblikket: </p> <h5> ÅBENT! </h5> ");

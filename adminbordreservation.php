@@ -21,11 +21,11 @@ include('variable.php');
 			<!-- Her ses der om administratoren har valgt at åbne eller lukke for bordreservationen -->
                 <?php
                 if (isset($_POST['openDIKULAN'])) {
-                    mysqli_query($db, "UPDATE openClosed SET yesNo='ja'");
+                    mysqli_query($db, "UPDATE openclosed SET yesNo='ja'");
                 }
 
                 if (isset($_POST['lukDIKULAN'])) {
-                    mysqli_query($db, "UPDATE openClosed SET yesNo='nej'");
+                    mysqli_query($db, "UPDATE openclosed SET yesNo='nej'");
                 }
 				?>
 				

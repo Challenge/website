@@ -33,7 +33,7 @@ include('variable.php');
                 <h2>Status over bordreservationen:</h2>
                 Klik for at se for at se status over hvem,
                 der har reserveret plads og hvor.
-                <form action="Tablereservation\showReservations.php">
+                <form action="statusBordres.php">
                     <button name="status" value="Submit">Se status</button>
                 </form>
 

@@ -1,6 +1,7 @@
 <?php
 include('isLoggedIn.php');
 include('top2.php');
+echo ($_SESSION['myusername']);
 ?>	
      
         <div id="page">

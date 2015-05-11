@@ -59,8 +59,30 @@ include('variable.php');
                                                                  WHERE TicketID='$_POST[ticketID]'");
                                     $numBookRes = mysqli_num_rows($bookingRes);
 									
-									/* Her kommer der en pop-op boks hvis pladsen ER reserveret af en anden */
+									/* SKAL ÆNDRES SÅ MAN RESERVERER EN NY + SLETTER DEN GAMLE */
                                     if ($numBookRes > 0) {
+																	
+									    if ($_POST['playername'] != '' AND $id != 'Choose a seat') {
+										
+											mysqli_query($db, "UPDATE booking
+                                                           SET PlayerName='',
+                                                               TicketID='',
+                                                               Color='White'
+                                                           WHERE TicketID=$_POST[tickedID]");
+											
+										
+                                            mysqli_query($db, "UPDATE booking
+                                                           SET PlayerName='$_POST[playername]',
+                                                               TicketID='$_POST[ticketID]',
+                                                               Color='Red'
+                                                           WHERE SeatID=$id");
+                                            echo "<script type='text/javascript'>alert('You have now booked seat " . $id . " ');</script>";
+                                        } else {
+                                            echo "<script type='text/javascript'>alert('You have to enter your name.');</script>";
+                                        }	/* test */
+									
+									
+									
                                         echo "<script type='text/javascript'>alert('You have already booked a seat for this LAN party with your ticket ID.');</script>";
                                     }
 									/* Her reserveres pladsen */

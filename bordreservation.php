@@ -71,11 +71,7 @@ include('variable.php');
                                                            WHERE TicketID=$_POST[ticketID]");
 											
 										
-                                            mysqli_query($db, "UPDATE booking
-                                                           SET PlayerName='$_POST[playername]',
-                                                               TicketID='$_POST[ticketID]',
-                                                               Color='Red'
-                                                           WHERE SeatID=$id");
+
                                             echo "<script type='text/javascript'>alert('You have now booked seat " . $id . " ');</script>";
                                         } else {
                                             echo "<script type='text/javascript'>alert('You have to enter your name.');</script>";

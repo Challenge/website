@@ -68,7 +68,7 @@ include('variable.php');
                                                            SET PlayerName='',
                                                                TicketID='',
                                                                Color='White'
-                                                           WHERE TicketID=$_POST[tickedID]");
+                                                           WHERE TicketID=$_POST[ticketID]");
 											
 										
                                             mysqli_query($db, "UPDATE booking

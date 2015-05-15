@@ -21,7 +21,7 @@ p.center {
 }
 </style>
 </head>
-
+<body>
 <!-- Her er en liste over alle reserverede borde, i et printervenligt format -->
 <?php
 include("db.php");
@@ -43,4 +43,5 @@ while ($row = mysqli_fetch_array($BookingData)) {
 
 echo "</table>";
 ?>
+</body>
 </html>

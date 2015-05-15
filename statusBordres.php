@@ -3,6 +3,23 @@
     <title>Liste over deltagere til DIKULAN</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link rel="stylesheet" type="text/css" href="MainCSS.css" />
+
+<style>
+table {
+    margin: -20px 0px 0px 0px;
+    border-spacing: 0px 20px;
+    font-size: 22px;
+}
+th, td {
+    border: 1px solid;
+    padding: 0px 10px;
+    text-align: center;
+    line-height: 2.5;
+}
+p.center {
+    text-align: center;
+}
+</style>
 </head>
 
 <!-- Her er en liste over alle reserverede borde, i et printervenligt format -->

@@ -15,7 +15,7 @@ echo "<table border='1'>
             <tr><th>Seat</th><th>Name</th><th>TicketID</th></tr>";
 
 $BookingData = mysqli_query($db, "SELECT SeatID, PlayerName, TicketID
-                                                      FROM Booking");
+                                                      FROM booking");
 while ($row = mysqli_fetch_array($BookingData)) {
     echo "  <tr>
                 <td>" . $row['SeatID'] . "</td>

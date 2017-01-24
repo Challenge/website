@@ -1,7 +1,7 @@
 <?php
 include('top.php');
 ?>	
-     
+<!-- Wow you're a h4x0r -->          
         <div id="page">
 			
 				<div id="indhold">

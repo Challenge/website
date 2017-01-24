@@ -1,7 +1,10 @@
 <html>
 <?php
-echo "<h1>" . $_GET['INFO'] . "</h1>";
 $info = $_GET['INFO'];
+$info = stripslashes($info);
+$info = mysqli_real_escape_string($info);
+echo "<h1>" . $info . "</h1>";
+
 ?>
 
 <!-- Denne del står for information/descrpiton, venstre side af turnerings-informationssiden -->
@@ -15,7 +18,7 @@ $info = $_GET['INFO'];
         echo ("<div id='turDesc'>
 			  <table class='turneringTable' style='width:80%; '>
 				<tr>
-						<td>" . $_GET['INFO'] . " </br> " . $row['Dag'] . " kl." . $row['Tid'] . "</td>
+						<td>" . $info . " </br> " . $row['Dag'] . " kl." . $row['Tid'] . "</td>
 				</tr>
 				<tr>
 						<td> ");

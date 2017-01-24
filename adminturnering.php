@@ -8,8 +8,8 @@ include('isLoggedIn.php');
 	 og sletter alle turneringer hvis der klikkes "slet alle turneringer" -->
 <?php
 if (isset($_GET['Opret'])) {
-    $Turnavn = $_GET['Turnavn'];
-    $Dag = $_GET['Dag'];
+    $Turnavn = mysqli_real_escape_string(stripslashes($_GET['Turnavn']));
+    $Dag = mysqli_real_escape_string(stripslashes($_GET['Dag']));
     if ($Dag == '1') {
         $DagB = "Fredag";
     } else if ($Dag == '2') {
@@ -17,8 +17,8 @@ if (isset($_GET['Opret'])) {
     } else if ($Dag == '3') {
         $DagB = "Søndag";
     }
-    $Tid = $_GET['Tid'];
-    $Desc = $_GET['Desc'];
+    $Tid = mysqli_real_escape_string(stripslashes($_GET['Tid']));
+    $Desc = mysqli_real_escape_string(stripslashes($_GET['Desc']));
     $sql = "INSERT INTO `turtabel` (`TurneringsID`, `TurneringsNavn`, `Tid`, `Dag`, `Description`) "
             . " VALUES (NULL, '$Turnavn', '$Tid', '$DagB', '$Desc')";
 } else if (isset($_GET['slet'])) {

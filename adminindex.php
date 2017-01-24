@@ -14,50 +14,61 @@ echo ($_SESSION['myusername']);
 								// Dette sker når der klikkes "Opdater"
 								if(isset($_POST["submit"]))
 								{
+
+									$forside1stor2 = mysqli_real_escape_string(stripslashes($_POST['forside1stor2']));
+									$forside1 = mysqli_real_escape_string(stripslashes($_POST['forside1']));
+									$forside2stor = mysqli_real_escape_string(stripslashes($_POST['forside2stor']));
+									$forside2 = mysqli_real_escape_string(stripslashes($_POST['forside2']));
+									$forside3stor = mysqli_real_escape_string(stripslashes($_POST['forside3stor']));
+									$forside3 = mysqli_real_escape_string(stripslashes($_POST['forside3']));
+									$forside4stor = mysqli_real_escape_string(stripslashes($_POST['forside4stor']));
+									$forside4 = mysqli_real_escape_string(stripslashes($_POST['forside4']));
+
+
 									// Overskriften
-									$forside1stor3 = $_POST['forside1stor2'];
+									$forside1stor3 = $forside1stor2;
 									$forside1stor3 = mysqli_escape_string($db,$forside1stor3);
 									$q = "UPDATE forside SET `desc`='" . $forside1stor3 . "' WHERE num = 1;";
 									mysqli_query($db, $q);
 								
 									// Undertekst til overskriften
-									$forside1 = $_POST['forside1'];
+									$forside1 = $forside1;
 									$forside1 = mysqli_escape_string($db,$forside1);
 									$q2 = "UPDATE forside SET `desc`='" . $forside1 . "' WHERE num = 2;";
 									mysqli_query($db, $q2);
 									
 									// Overskrift lille vindue 1
-									$forside2stor = $_POST['forside2stor'];
+									$forside2stor = $forside2stor;
 									$forside2stor = mysqli_escape_string($db,$forside2stor);
 									$q2 = "UPDATE forside SET `desc`='" . $forside2stor . "' WHERE num = 3;";
 									mysqli_query($db, $q2);
 									
 									// Undertekst til vindue 1
-									$forside2 = $_POST['forside2'];
+									$forside2 = $forside2;
 									$forside2 = mysqli_escape_string($db,$forside2);
 									$q3 = "UPDATE forside SET `desc`='" . $forside2 . "' WHERE num = 4;";
 									mysqli_query($db, $q3);
 									
 									// Overskrift lille vindue 2
-									$forside3stor = $_POST['forside3stor'];
+									$forside3stor = $forside3stor;
 									$forside3stor = mysqli_escape_string($db,$forside3stor);
 									$q4 = "UPDATE forside SET `desc`='" . $forside3stor . "' WHERE num = 5;";
 									mysqli_query($db, $q4);
 								
 									// Undertekst til vindue 2
-									$forside3 = $_POST['forside3'];
+									$forside3 = $forside3;
 									$forside3 = mysqli_escape_string($db,$forside3);
 									$q5 = "UPDATE forside SET `desc`='" . $forside3 . "' WHERE num = 6;";
 									mysqli_query($db, $q5);
 									
 									// Overskrift lille vindue 3
-									$forside4stor = $_POST['forside4stor'];
+									$forside4stor = $forside4stor;
 									$forside4stor = mysqli_escape_string($db,$forside4stor);
 									$q6 = "UPDATE forside SET `desc`='" . $forside4stor . "' WHERE num = 7;";
 									mysqli_query($db, $q6);
 								
 									// Undertekst til vindue 3
-									$forside4 = $_POST['forside4'];
+									$forside4 = $forside4;
 									$forside4 = mysqli_escape_string($db,$forside4);
 									$q7 = "UPDATE forside SET `desc`='" . $forside4 . "' WHERE num = 8;";
 									mysqli_query($db, $q7);

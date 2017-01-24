@@ -1,14 +1,27 @@
 <?php
 if (isset($_GET['cmd'])) {
-    $tur = $_GET['Turnering'];
-    $navn = $_GET['Navn'];
-    $tag = $_GET['Gametag'];
-    $Bid = $_GET['BordID'];
-    $uni = $_GET['Turnering'] . " " . $_GET['Navn'] . " " . $_GET['Gametag'];
+
+    $turInput = $_GET['Turnering'];
+    $turInput = stripslashes($turInput);
+    $turInput = mysqli_real_escape_string($turInput);
+
+    $nameInput = $_GET['Navn'];
+    $nameInput = stripslashes($nameInput);
+    $nameInput = mysqli_real_escape_string($nameInput);
+
+    $gameInput = $_GET['Gametag'];
+    $gameInput = stripslashes($gameInput);
+    $gameInput = mysqli_real_escape_string($gameInput);
+
+    $bordInput = $_GET['BordID'];
+    $bordInput = stripslashes($bordInput);
+    $bordInput = mysqli_real_escape_string($bordInput);            
+
+    $uni = $turInput . " " . $nameInput . " " . $gameInput;
 
     if ($tur != '0') {
         $sql = "INSERT INTO deltager (TurneringsID , Navn , Gamertag , BordID , Unik)"
-                . "VALUES ($tur , '$navn' , '$tag' , '$Bid' , '$uni' )";
+                . "VALUES ($tur , '$nameInput' , '$gameInput' , '$bordInput' , '$uni' )";
     }
 }
 ?>
@@ -44,10 +57,10 @@ if (isset($_GET['cmd'])) {
 <!-- Den følgende php står for fejlbeskeder/successbeskeder ved tilmelding til turnering-->
 <?php
 if (isset($_REQUEST['cmd'])) {
-    if ($navn > "%") {
-        if ($tag > "%") {
-            if ($Bid > 0 && $Bid < 88) {
-                if ($tur != '0') {
+    if ($nameInput > "%") {
+        if ($gameInput > "%") {
+            if ($bordInput > 0 && $bordInput < 88) {
+                if ($turInput != '0') {
                     mysqli_query($db, $sql);
                     echo "<h2 text align=\"center\">Succes</h2>";
                 } else {

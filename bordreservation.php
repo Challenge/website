@@ -11,7 +11,19 @@ include('variable.php');
 				
 				<!-- Her følger en PHP kode der tager højde for de forskellige input man giver "navn, billet, plads", når man bestiller plads -->
                     <?php
-					
+
+                    $numInput = $_GET['pid'];
+					$numInput = stripslashes($numInput);
+                    $numInput = mysqli_real_escape_string($numInput);
+
+                    $ticketInput = $_POST[ticketID];
+                    $ticketInput = stripcslashes($ticketInput);
+                    $ticketInput = mysqli_real_escape_string($ticketInput);
+
+                    $nameInput = $_POST[playernamee];
+                    $nameInput = stripcslashes($nameInput);
+                    $nameInput = mysqli_real_escape_string($nameInput);
+
 				/* Dette for loop checker, hvor den første ikke reserverede (hvide) plads er, og gør den til $currentTable */
 					for ($ii = 1; $ii <= 80; $ii++)
 					{
@@ -20,12 +32,12 @@ include('variable.php');
 						if ($color["Color"] == "White") {$currentTable = $ii; break;}
 					}
 					
-                    if (isset($_GET['pid']) && is_numeric($_GET['pid']) && $_GET['pid'] >= 1 && $_GET['pid'] <= 80 ) {
-                        $id = $_GET['pid'];
+                    if (isset($numInput) && is_numeric($numInput) && $numInput >= 1 && $numInput <= 80 ) {
+                        $id = $numInput;
 
 						
 						/* Her ses der om pladsen allerede er taget (kigges på farven) */
-                        if (isset($_POST['ticketID'])) {
+                        if (isset($ticketInput)) {
 															 
 							$stmt = $db->prepare("SELECT COUNT(SeatID)
                                                          FROM booking
@@ -48,7 +60,7 @@ include('variable.php');
                             if ($isFree > 0) {
                                 $result = mysqli_query($db, "SELECT TicketID
                                                          FROM ticket
-                                                         WHERE TicketID='$_POST[ticketID]'");
+                                                         WHERE TicketID='$ticketInput'");
 														 
                                 $numResults = mysqli_num_rows($result);
 								
@@ -56,24 +68,24 @@ include('variable.php');
                                 if ($numResults > 0) {
                                     $bookingRes = mysqli_query($db, "SELECT TicketID
                                                                  FROM booking
-                                                                 WHERE TicketID='$_POST[ticketID]'");
+                                                                 WHERE TicketID='$ticketInput'");
                                     $numBookRes = mysqli_num_rows($bookingRes);
 									
 									/* SKAL ÆNDRES SÅ MAN RESERVERER EN NY + SLETTER DEN GAMLE */
                                     if ($numBookRes > 0) {
 																	
-									    if ($_POST['playername'] != '' AND $id != 'Choose a seat') {
+									    if ($nameInput != '' AND $id != 'Choose a seat') {
 										
 											mysqli_query($db, "UPDATE booking
                                                            SET PlayerName='',
                                                                TicketID='',
                                                                Color='White'
-                                                           WHERE TicketID='$_POST[ticketID]'");
+                                                           WHERE TicketID='$ticketInput'");
 											
 										
                                             mysqli_query($db, "UPDATE booking
-                                                           SET PlayerName='$_POST[playername]',
-                                                               TicketID='$_POST[ticketID]',
+                                                           SET PlayerName='$nameInput',
+                                                               TicketID='$ticketInput',
                                                                Color='Red'
                                                            WHERE SeatID=$id");
                                             echo "<script type='text/javascript'>alert('You have now booked seat " . $id . " ');</script>";
@@ -88,10 +100,10 @@ include('variable.php');
 									/* Her reserveres pladsen */
 									else {
 									
-                                        if ($_POST['playername'] != '' AND $id != 'Choose a seat') {
+                                        if ($nameInput != '' AND $id != 'Choose a seat') {
                                             mysqli_query($db, "UPDATE booking
-                                                           SET PlayerName='$_POST[playername]',
-                                                               TicketID='$_POST[ticketID]',
+                                                           SET PlayerName='$nameInput',
+                                                               TicketID='$ticketInput',
                                                                Color='Red'
                                                            WHERE SeatID=$id");
                                             echo "<script type='text/javascript'>alert('You have now booked seat " . $id . " ');</script>";
@@ -174,9 +186,9 @@ include('variable.php');
                     }
 					
 		/* Denne IF sætning sørger for at det sæde man er ved at vælge bliver farvet grønt */
-					 if (isset($_GET['pid']))
+					 if (isset($numInput))
 					 {
-						$idd = $_GET['pid'];
+						$idd = $numInput;
 						echo ("<div id='" . $idd . "'");
                         echo ("style='");
                         echo ("height:16px;");

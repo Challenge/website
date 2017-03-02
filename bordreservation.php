@@ -112,8 +112,6 @@ include('variable.php');
                                             echo "<script type='text/javascript'>alert('You have to enter your name.');</script>";
                                         }
                                     }
-                                } else {
-                                    echo "<script type='text/javascript'>alert('Duuude! Your ticket ID is invalid!');</script>";
                                 }
                             } else {
                                 echo "<script type='text/javascript'>alert('This seat is already occupied. Choose another, man!');</script>";

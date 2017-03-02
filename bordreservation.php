@@ -21,11 +21,9 @@ include('variable.php');
                     $ticketInput = mysqli_real_escape_string($db,$ticketInput);
 
                     $nameInput = $_POST[playername];
-                    print "$nameInput";
                     $nameInput = stripcslashes($nameInput);
-                    print "$nameInput";
                     $nameInput = mysqli_real_escape_string($db,$nameInput);
-                    print "$nameInput";
+                    print "$nameInput"
 
 				/* Dette for loop checker, hvor den første ikke reserverede (hvide) plads er, og gør den til $currentTable */
 					for ($ii = 1; $ii <= 80; $ii++)
@@ -60,7 +58,7 @@ include('variable.php');
 							$stmt->close();
 							
 							/* Her ses der om ticket-ID'en er gyldig/findes */
-                            if (1) {
+                            if ($isFree > 0) {
                                 $result = mysqli_query($db, "SELECT TicketID
                                                          FROM ticket
                                                          WHERE TicketID='$ticketInput'");
@@ -68,16 +66,16 @@ include('variable.php');
                                 $numResults = mysqli_num_rows($result);
 								
 								/* Her ses der om der allerede er blevet booket på den plads*/
-                                if (1) {
+                                if ($numResults > 0) {
                                     $bookingRes = mysqli_query($db, "SELECT TicketID
                                                                  FROM booking
                                                                  WHERE TicketID='$ticketInput'");
                                     $numBookRes = mysqli_num_rows($bookingRes);
 									
 									/* SKAL ÆNDRES SÅ MAN RESERVERER EN NY + SLETTER DEN GAMLE */
-                                    if (1) {
+                                    if ($numBookRes > 0) {
 																	
-									    if (1) {
+									    if ($nameInput != '' AND $id != 'Choose a seat') {
 										
 											mysqli_query($db, "UPDATE booking
                                                            SET PlayerName='',
@@ -98,6 +96,7 @@ include('variable.php');
 									
 									
 									
+                                        echo "<script type='text/javascript'>alert('You have already booked a seat for this LAN party with your ticket ID.');</script>";
                                     }
 									/* Her reserveres pladsen */
 									else {

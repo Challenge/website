@@ -74,7 +74,7 @@ include('variable.php');
 									/* SKAL ÆNDRES SÅ MAN RESERVERER EN NY + SLETTER DEN GAMLE */
                                     if (1) {
 																	
-									    if ($nameInput != '' AND $id != 'Choose a seat') {
+									    if (1) {
 										
 											mysqli_query($db, "UPDATE booking
                                                            SET PlayerName='',
@@ -95,7 +95,6 @@ include('variable.php');
 									
 									
 									
-                                        echo "<script type='text/javascript'>alert('You have already booked a seat for this LAN party with your ticket ID.');</script>";
                                     }
 									/* Her reserveres pladsen */
 									else {

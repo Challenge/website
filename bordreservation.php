@@ -14,15 +14,15 @@ include('variable.php');
 
                     $numInput = $_GET['pid'];
 					$numInput = stripslashes($numInput);
-                    $numInput = mysqli_real_escape_string($numInput);
+                    $numInput = mysqli_real_escape_string($db,$numInput);
 
                     $ticketInput = $_POST[ticketID];
                     $ticketInput = stripcslashes($ticketInput);
-                    $ticketInput = mysqli_real_escape_string($ticketInput);
+                    $ticketInput = mysqli_real_escape_string($db,$ticketInput);
 
                     $nameInput = $_POST[playernamee];
                     $nameInput = stripcslashes($nameInput);
-                    $nameInput = mysqli_real_escape_string($nameInput);
+                    $nameInput = mysqli_real_escape_string($db,$nameInput);
 
 				/* Dette for loop checker, hvor den første ikke reserverede (hvide) plads er, og gør den til $currentTable */
 					for ($ii = 1; $ii <= 80; $ii++)

@@ -57,7 +57,7 @@ include('variable.php');
 							$stmt->close();
 							
 							/* Her ses der om ticket-ID'en er gyldig/findes */
-                            if ($isFree) {
+                            if (1) {
                                 $result = mysqli_query($db, "SELECT TicketID
                                                          FROM ticket
                                                          WHERE TicketID='$ticketInput'");
@@ -65,14 +65,14 @@ include('variable.php');
                                 $numResults = mysqli_num_rows($result);
 								
 								/* Her ses der om der allerede er blevet booket på den plads*/
-                                if ($numResults) {
+                                if (1) {
                                     $bookingRes = mysqli_query($db, "SELECT TicketID
                                                                  FROM booking
                                                                  WHERE TicketID='$ticketInput'");
                                     $numBookRes = mysqli_num_rows($bookingRes);
 									
 									/* SKAL ÆNDRES SÅ MAN RESERVERER EN NY + SLETTER DEN GAMLE */
-                                    if ($numBookRes) {
+                                    if (1) {
 																	
 									    if ($nameInput != '' AND $id != 'Choose a seat') {
 										

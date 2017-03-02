@@ -20,7 +20,7 @@ include('variable.php');
                     $ticketInput = stripcslashes($ticketInput);
                     $ticketInput = mysqli_real_escape_string($db,$ticketInput);
 
-                    $nameInput = $_POST[playernamee];
+                    $nameInput = $_POST[playername];
                     print "$nameInput";
                     $nameInput = stripcslashes($nameInput);
                     print "$nameInput";

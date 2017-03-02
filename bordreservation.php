@@ -23,7 +23,6 @@ include('variable.php');
                     $nameInput = $_POST[playername];
                     $nameInput = stripcslashes($nameInput);
                     $nameInput = mysqli_real_escape_string($db,$nameInput);
-                    print "$nameInput";
 
 				/* Dette for loop checker, hvor den første ikke reserverede (hvide) plads er, og gør den til $currentTable */
 					for ($ii = 1; $ii <= 80; $ii++)

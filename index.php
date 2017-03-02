@@ -1,7 +1,7 @@
 <?php
 include('top.php');
 ?>	
-<!-- Virker det? -->          
+<!-- Sarah er en hacker!? -->          
         <div id="page">
 			
 				<div id="indhold">

@@ -7,7 +7,7 @@ include("db.php");
 
 <!-- Welcome! -->
 <head>
-    <title>DIKULAN</title>
+    <title>DikuLan</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link rel="stylesheet" type="text/css" href="MainCSS.css" />
 	
@@ -28,7 +28,7 @@ include("db.php");
 			</div>
 			
 			<header>
-			<a href="index.php"> <img src="images/DIKULAN9.png"> </a>
+			<a href="index.php"> <img src="images/DIKULAN5.png"> </a>
 			</header>
 			
 			

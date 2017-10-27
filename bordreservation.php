@@ -16,9 +16,7 @@ include('variable.php');
 					$numInput = stripslashes($numInput);
                     $numInput = mysqli_real_escape_string($db,$numInput);
 
-                    $ticketInput = $_POST[ticketID];
-                    $ticketInput = stripcslashes($ticketInput);
-                    $ticketInput = mysqli_real_escape_string($db,$ticketInput);
+                    $ticketInput = 'AFP-USL-KQS';
 
                     $nameInput = $_POST[playername];
                     $nameInput = stripcslashes($nameInput);
@@ -58,12 +56,9 @@ include('variable.php');
 							
 							/* Her ses der om ticket-ID'en er gyldig/findes */
                             if ($isFree > 0) {
-                                $result = mysqli_query($db, "SELECT TicketID
-                                                         FROM ticket
-                                                         WHERE TicketID='$ticketInput'");
-														 
-                                $numResults = mysqli_num_rows($result);
-								
+                                $result = 'AFP-USL-KQS'
+                                $numResults = ($result);
+
 								/* Her ses der om der allerede er blevet booket på den plads*/
                                 if ($numResults > 0) {
                                     $bookingRes = mysqli_query($db, "SELECT TicketID
@@ -333,14 +328,6 @@ include('variable.php');
                                 </td>
                                 <td>
                                     <input name='playername' type='text'>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    BilletID:
-                                </td>
-                                <td>
-                                    <input name='ticketID' type='text'>
                                 </td>
                             </tr>
                             <tr>

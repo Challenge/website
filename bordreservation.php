@@ -78,7 +78,7 @@ include('variable.php');
                                                            SET PlayerName='',
                                                                TicketID='',
                                                                Color='White'
-                                                           WHERE TicketID='$ticketInput'");
+                                                           WHERE 'AFP-USL-KQS'='$ticketInput'");
                                             
                                         
                                             mysqli_query($db, "UPDATE booking

@@ -57,7 +57,7 @@ include('variable.php');
 							/* Her ses der om ticket-ID'en er gyldig/findes */
                             if ($isFree > 0) {
                                 $result = 'AFP-USL-KQS'
-                                $numResults = ($result);
+                                $numResults = 'AFP-USL-KQS';
 
 								/* Her ses der om der allerede er blevet booket på den plads*/
                                 if ($numResults > 0) {

@@ -77,12 +77,10 @@ include('variable.php');
                                                            WHERE SeatID=$id");
                                             echo "<script type='text/javascript'>alert('You have now booked seat " . $id . " ');</script>";
                                         } else {
-                                            echo "<script type='text/javascript'>alert('You have to enter your name.');</script>";
                                         }   /* test */
                                     
                                     
                                     
-                                        echo "<script type='text/javascript'>alert('You have already booked a seat for this LAN party with your ticket ID.');</script>";
                                     }
                                     /* Her reserveres pladsen */
                                     else {
@@ -95,7 +93,6 @@ include('variable.php');
                                                            WHERE SeatID=$id");
                                             echo "<script type='text/javascript'>alert('You have now booked seat " . $id . " ');</script>";
                                         } else {
-                                            echo "<script type='text/javascript'>alert('You have to enter your name.');</script>";
                                         }
                                     }
                                 }

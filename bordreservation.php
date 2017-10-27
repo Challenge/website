@@ -296,8 +296,8 @@ include('variable.php');
                 </br>
                 
                     <h3 style='text-align: center; font-weight: bold;'> Vælg og klik på en ledig plads på billedet til
-                    venstre, og indsæt dit navn og billet-ID
-                    for at bestille. UPDATE: For at bestille en ny plads, skal du blot vælge en ny plads, indtaste navn og billet-ID igen, og du vil få tildelt en ny plads.</h3>
+                    venstre, og indsæt dit navn
+                    for at bestille.</h3>
                     
                     <form action='' method='post'>
                         <table>

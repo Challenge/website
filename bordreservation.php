@@ -55,12 +55,8 @@ include('variable.php');
                             $stmt->close();
                             
                             /* Her ses der om ticket-ID'en er gyldig/findes */
-                            if ($isFree > 0) {
-                                $result = mysqli_query($db, "SELECT TicketID
-                                                         FROM ticket
-                                                         WHERE TicketID='$ticketInput'");
-                                                         
-                                $numResults = mysqli_num_rows($result);
+                            if ($isFree > 0) {          
+                                $numResults = 1
                                 
                                 /* Her ses der om der allerede er blevet booket på den plads*/
                                 if ($numResults > 0) {
@@ -73,13 +69,6 @@ include('variable.php');
                                     if ($numBookRes > 0) {
                                                                     
                                         if ($nameInput != '' AND $id != 'Choose a seat') {
-                                        
-                                            mysqli_query($db, "UPDATE booking
-                                                           SET PlayerName='',
-                                                               TicketID='',
-                                                               Color='White'
-                                                           WHERE 'AFP-USL-KQS'='$ticketInput'");
-                                            
                                         
                                             mysqli_query($db, "UPDATE booking
                                                            SET PlayerName='$nameInput',

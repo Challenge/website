@@ -16,7 +16,8 @@ include('variable.php');
                     $numInput = stripslashes($numInput);
                     $numInput = mysqli_real_escape_string($db,$numInput);
 
-                    $ticketInput = "AFP-USL-KQS";
+                    // 2017 Winter fix! Denne værdi skal ændres til en random billet-ID for at virke!
+                    $ticketInput = "AEC-SRK-AMS";
 
                     $nameInput = $_POST[playername];
                     $nameInput = stripcslashes($nameInput);

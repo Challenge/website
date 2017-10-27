@@ -35,7 +35,7 @@ include('variable.php');
 
 						
 						/* Her ses der om pladsen allerede er taget (kigges på farven) */
-                        if (isset($ticketInput)) {
+                        if (1 > 0) {
 															 
 							$stmt = $db->prepare("SELECT COUNT(SeatID)
                                                          FROM booking
